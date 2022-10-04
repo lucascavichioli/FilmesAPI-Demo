@@ -1,7 +1,9 @@
-﻿using System;
+﻿using FilmesApi.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace Filmes.Models
@@ -20,5 +22,8 @@ namespace Filmes.Models
         public string Genero { get; set; }
         [Range(1, 600, ErrorMessage = "Duração permitida deve ter no mínimo 1 e no máximo 600 minutos")]
         public int Duracao { get; set; }
+        public int ClassificacaoEtaria { get; set; }
+        [JsonIgnore]
+        public virtual List<Sessao> Sessoes { get; set; }
     }
 }
