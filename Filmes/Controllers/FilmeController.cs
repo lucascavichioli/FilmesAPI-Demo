@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using Filmes.Models;
 using FilmesAPI.Services;
 using FluentResults;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Filmes.Controllers
 {
@@ -25,6 +26,7 @@ namespace Filmes.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "admin")]
         public IActionResult AdicionarFilme([FromBody] CreateFilmeDto filmeDto)
         {
 
