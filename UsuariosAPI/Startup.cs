@@ -44,6 +44,7 @@ namespace UsuariosAPI
             services.AddScoped<LoginService, LoginService>();
             services.AddScoped<TokenService, TokenService>();
             services.AddScoped<LogoutService, LogoutService>();
+            services.AddScoped<EmailService, EmailService>();
             services.AddControllers();
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
         }

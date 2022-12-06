@@ -29,7 +29,7 @@ namespace UsuariosAPI.Controllers
             return Ok(resultado.Successes);
         }
 
-        [HttpGet("/ativa")]
+       /* [HttpGet("/ativa")]
 
         public IActionResult AtivaContaUsuario([FromQuery] AtivaContaRequest request)
         {
@@ -37,8 +37,7 @@ namespace UsuariosAPI.Controllers
             if (resultado.IsFailed) return StatusCode(500);
             return Ok(resultado.Successes);
         
-        }
-
+        }*/
 
     }
 }
